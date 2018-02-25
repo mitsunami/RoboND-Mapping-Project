@@ -25,7 +25,7 @@
   output="screen" args="-urdf -param robot_description -model custom_bot"/>
 
   <!--launch rviz-->
-  <node name="rviz" pkg="rviz" type="rviz" respawn="false" args="-d /home/robond/catkin_ws/src/Rvizconfig.rviz"/>
+  <node name="rviz" pkg="rviz" type="rviz" respawn="false" args="-d /home/robond/catkin_ws/src/custom_bot/custom_bot_rvizconfig.rviz"/>
 
 </launch>
 
