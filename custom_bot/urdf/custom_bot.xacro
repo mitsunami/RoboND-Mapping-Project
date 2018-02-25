@@ -2,7 +2,7 @@
 
 <robot name="custom_bot" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <!-- xacro:include filename="$(find custom_bot)/urdf/custom_bot.gazebo" / -->
+  <xacro:include filename="$(find custom_bot)/urdf/custom_bot.gazebo" />
   <link name="robot_footprint"></link>
 
   <joint name="robot_footprint_joint" type="fixed">
@@ -27,7 +27,6 @@
     <collision name='collision'>
       <origin xyz="0 0 0" rpy=" 0 0 0"/> 
       <geometry>
-        <!-- box size=".4 .2 .1"/ -->
         <cylinder radius="0.3" length="0.1"/>
       </geometry>
     </collision>
@@ -35,7 +34,6 @@
     <visual name='chassis_visual'>
       <origin xyz="0 0 0" rpy=" 0 0 0"/>
       <geometry>
-        <!-- box size=".4 .2 .1"/ -->
         <cylinder radius="0.3" length="0.1"/>
       </geometry>
     </visual>
