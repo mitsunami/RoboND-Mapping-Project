@@ -9,6 +9,6 @@ TrajectoryPlannerROS:
   xy_goal_tolerance : 0.10
   sim_time: 1.0
   pdist_scale: 0.6
-  max_vel_x: 1.0 # default 0.5
-  max_vel_theta: 2.0 # default 1.0
-  min_vel_theta: -2.0 # default -1.0
+  max_vel_x: 0.5 # 1.0 # default 0.5
+  max_vel_theta: 2.0 # 2.0 # default 1.0
+  min_vel_theta: -2.0 # -2.0 # default -1.0
