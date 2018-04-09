@@ -21,7 +21,7 @@
 
   <gazebo reference="camera">
     <material>Gazebo/Green</material>
-    <sensor type="depth" name="camera1">
+    <sensor type="depth" name="camera">
         <always_on>1</always_on>
         <update_rate>20.0</update_rate>
         <visualize>true</visualize>             
@@ -43,8 +43,8 @@
       <plugin name="camera_controller" filename="libgazebo_ros_openni_kinect.so">
              <alwaysOn>true</alwaysOn>
                 <updateRate>10.0</updateRate>
-        <cameraName>custom_bot/camera1</cameraName>
-                <frameName>camera_rgbd_frame</frameName>                   
+        <cameraName>camera</cameraName>
+                <frameName>camera</frameName>                   
            <imageTopicName>rgb/image_raw</imageTopicName>
             <depthImageTopicName>depth/image_raw</depthImageTopicName>
             <pointCloudTopicName>depth/points</pointCloudTopicName>
