@@ -64,12 +64,14 @@
       <param name="subscribe_scan"              type="bool" value="true"/>
       <!--param name="frame_id"                    type="string" value="base_footprint"/-->
       <param name="frame_id"                    type="string" value="robot_footprint"/>
+      <param name="queue_size"                  type="int" value="20"/>
 
       <remap from="rgb/image"       to="$(arg rgb_topic)"/>
       <remap from="depth/image"     to="$(arg depth_topic)"/>
       <remap from="rgb/camera_info" to="$(arg camera_info_topic)"/>
       <!--remap from="scan"            to="/scan"/-->
       <remap from="scan"            to="/custom_bot/laser/scan"/>
+      <remap from="odom"            to="/odom"/>
     </node>
 
   </group>
