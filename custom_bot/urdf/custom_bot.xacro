@@ -3,6 +3,9 @@
 <robot name="custom_bot" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
   <xacro:include filename="$(find custom_bot)/urdf/custom_bot.gazebo" />
+  <xacro:property name="M_PI" value="3.1415926535897931" />
+
+
   <link name="robot_footprint"></link>
 
   <joint name="robot_footprint_joint" type="fixed">
@@ -192,6 +195,16 @@
 
   </link>
 
+
+  <joint name="camera_optical_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="${-M_PI/2} 0 ${-M_PI/2}" />
+    <parent link="camera" />
+    <child link="camera_optical" />
+  </joint>
+
+
+  <link name="camera_optical">
+  </link>
 
 
   <joint type="fixed" name="hokuyo_joint">
